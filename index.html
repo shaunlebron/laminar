@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <script src="lib/codemirror.js"></script>
+  <link rel="stylesheet" href="lib/codemirror.css">
+  <script src="mode/javascript/javascript.js"></script>
+  <script src="lib/tooltip.js"></script>
+
+  <link rel="stylesheet" href="css/one-dark.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+<div id="container">
+
+<textarea id="normal">
+// Normal
+
+const findUsers = (users: Array&lt;User&gt;, predicate: User =&gt; boolean): Array&lt;User&gt; => {
+  const matches: Array&lt;User&gt; = [];
+  for (let user of users) {
+    if (predicate(user)) {
+      matches.push(user);
+    }
+  }
+  return matches;
+};
+</textarea>
+
+<!--
+<textarea id="tucked">
+const findUsers = (users, predicate) => {
+  const matches = [];
+  for (let user of users) {
+    if (predicate(user)) {
+      matches.push(user);
+    }
+  }
+  return matches;
+};
+</textarea>
+-->
+
+<div class="CodeMirror cm-s-one-dark">
+    <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 232px;">
+        <textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"
+            tabindex="0"></textarea>
+    </div>
+    <div class="CodeMirror-vscrollbar" cm-not-content="true" style="width: 18px; pointer-events: none;">
+        <div style="min-width: 1px; height: 0px;"></div>
+    </div>
+    <div class="CodeMirror-hscrollbar" cm-not-content="true" style="height: 18px; pointer-events: none;">
+        <div style="height: 100%; min-height: 1px; width: 0px;"></div>
+    </div>
+    <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+    <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+    <div class="CodeMirror-scroll" tabindex="-1">
+        <div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 30px; min-height: 218px; min-width: 451px; padding-right: 0px; padding-bottom: 0px;">
+            <div style="position: relative; top: 0px;">
+                <div class="CodeMirror-lines" role="presentation">
+                    <div role="presentation" style="position: relative; outline: none;">
+                        <div class="CodeMirror-measure"></div>
+                        <div class="CodeMirror-measure"></div>
+                        <div style="position: relative; z-index: 1;"></div>
+                        <div class="CodeMirror-cursors">
+                            <div class="CodeMirror-cursor" style="left: 232px; top: 0px; height: 21px;">&nbsp;</div>
+                        </div>
+                        <div class="CodeMirror-code" role="presentation">
+                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Tucked</span></span></pre>
+                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"></span></pre>
+                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">const</span> <span class="cm-def type-annotated" data-tooltip title="=> Array<User>">findUsers</span> <span class="cm-operator">=</span> (<span class="cm-variable type-annotated" data-tooltip title="Array<User>">users</span>, <span class="cm-variable type-annotated" data-tooltip title="User => boolean">predicate</span>) <span class="cm-operator">=&gt;</span> {</span></pre>
+                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-keyword">const</span> <span class="cm-def type-annotated" data-tooltip title="Array<User>">matches</span> <span class="cm-operator">=</span> [];</span></pre>
+                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-keyword">for</span> (<span class="cm-keyword">let</span> <span class="cm-def">user</span> <span class="cm-keyword">of</span> <span class="cm-variable-2">users</span>) {</span></pre>
+                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">if</span> (<span class="cm-variable-2">predicate</span>(<span class="cm-variable-2">user</span>)) {</span></pre>
+                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">      <span class="cm-variable-2">matches</span>.<span class="cm-property">push</span>(<span class="cm-variable-2">user</span>);</span></pre>
+                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre>
+                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  }</span></pre>
+                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-keyword">return</span> <span class="cm-variable-2">matches</span>;</span></pre>
+                            <pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">};</span></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 218px;"></div>
+        <div class="CodeMirror-gutters" style="display: none; height: 248px;"></div>
+    </div>
+</div>
+
+</div>
+
+<script src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+html,body {
+  height: 100%;
+  background-color: #1e1f24;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 100%;
+  margin: 20px;
+}
+
+.CodeMirror {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 10px;
+}
+.CodeMirror-code {
+  padding: 20px;
+}
+
+.type-annotated {
+  border-bottom: 1px solid;
+  cursor: pointer;
+}
+
+#tooltip {
+	position:absolute;
+	background:#223;
+	color:#ffffff;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	padding:8px;
+	z-index:999;
+}
+
+#tooltip.alt-tooltip {
+	background:#490B22;
+}
